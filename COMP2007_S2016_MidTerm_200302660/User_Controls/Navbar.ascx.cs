@@ -5,11 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+// required for Identity and OWIN Security
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
+
 /**
- * @author: Tom Tsiliopoulos
- * @date: June 23, 2016
- * @version: 0.0.3 - updated SetActivePage Method to include Todo List
- */
+ * @author: D'Arcey Taylor
+ * @date: May 26, 2015
+ * @version: 0.0.1 added SetActivePage method
+**/
 
 namespace COMP2007_S2016_MidTerm_200302660
 {
@@ -17,7 +22,26 @@ namespace COMP2007_S2016_MidTerm_200302660
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SetActivePage();
+
+            if (!IsPostBack)
+            {
+                // check if a user is logged in
+                if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                    // show the game details area
+                    UserPlaceHolder.Visible = true;
+                    PublicPlaceHolder.Visible = true;
+                    Login.Visible = false;
+                                        
+                }
+                else
+                {
+                    // only show login and register
+                    UserPlaceHolder.Visible = false;
+                    PublicPlaceHolder.Visible = true;
+                }
+                SetActivePage();
+            }
         }
 
         /**
@@ -37,6 +61,12 @@ namespace COMP2007_S2016_MidTerm_200302660
                     break;
                 case "Todo List":
                     todo.Attributes.Add("class", "active");
+                    break;
+                case "Login":
+                    Login.Attributes.Add("class", "active");
+                    break;
+                case "Logout":
+                    Logout.Attributes.Add("class", "active");
                     break;
             }
         }

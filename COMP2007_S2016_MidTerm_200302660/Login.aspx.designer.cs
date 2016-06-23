@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COMP2007_S2016_MidTerm_200302660 {
+namespace COMP2007_S2016_MidTerm_200302660.Todo {
     
     
-    public partial class TodoDetails {
+    public partial class Login {
         
         /// <summary>
         /// AlertFlash control.
@@ -31,48 +31,48 @@ namespace COMP2007_S2016_MidTerm_200302660 {
         protected global::System.Web.UI.WebControls.Label StatusLabel;
         
         /// <summary>
-        /// TodoNameTextBox control.
+        /// UserNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TodoNameTextBox;
+        protected global::System.Web.UI.WebControls.TextBox UserNameTextBox;
         
         /// <summary>
-        /// TodoNotesTextBox control.
+        /// PasswordTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TodoNotesTextBox;
+        protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
         
         /// <summary>
-        /// CompletedCheckBox control.
+        /// BackButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CompletedCheckBox;
+        protected global::System.Web.UI.WebControls.Button BackButton;
         
         /// <summary>
-        /// CancelButton control.
+        /// LoginButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CancelButton;
+        protected global::System.Web.UI.WebControls.Button LoginButton;
         
         /// <summary>
-        /// SaveButton control.
+        /// RegisterButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SaveButton;
+        protected global::System.Web.UI.WebControls.Button RegisterButton;
     }
 }
