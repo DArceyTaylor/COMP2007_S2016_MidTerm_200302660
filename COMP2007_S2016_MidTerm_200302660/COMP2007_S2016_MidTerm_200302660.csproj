@@ -273,6 +273,7 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Startup.cs" />
     <Compile Include="TodoDetails.aspx.cs">
       <DependentUpon>TodoDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
